@@ -1,0 +1,6 @@
+C:\Users\Rodrigo\Dropbox\BSI\5° Período (2018.1)\Programação V\Atividades\Atividade 06\DistanciasCliente\DistanciasCliente\bin\Debug\DistanciasCliente.exe.config
+C:\Users\Rodrigo\Dropbox\BSI\5° Período (2018.1)\Programação V\Atividades\Atividade 06\DistanciasCliente\DistanciasCliente\bin\Debug\DistanciasCliente.exe
+C:\Users\Rodrigo\Dropbox\BSI\5° Período (2018.1)\Programação V\Atividades\Atividade 06\DistanciasCliente\DistanciasCliente\bin\Debug\DistanciasCliente.pdb
+C:\Users\Rodrigo\Dropbox\BSI\5° Período (2018.1)\Programação V\Atividades\Atividade 06\DistanciasCliente\DistanciasCliente\obj\Debug\DistanciasCliente.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Dropbox\BSI\5° Período (2018.1)\Programação V\Atividades\Atividade 06\DistanciasCliente\DistanciasCliente\obj\Debug\DistanciasCliente.exe
+C:\Users\Rodrigo\Dropbox\BSI\5° Período (2018.1)\Programação V\Atividades\Atividade 06\DistanciasCliente\DistanciasCliente\obj\Debug\DistanciasCliente.pdb

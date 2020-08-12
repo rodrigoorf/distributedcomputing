@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://server/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DistanciasServerImplService" targetNamespace="http://server/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/dis?xsd=1" namespace="http://jaxb.dev.java.net/array" />
+    </xsd:schema>
+  </types>
+  <message name="calcularDistanciaMultiplasCidades">
+    <part name="arg0" type="xsd:string" />
+    <part xmlns:ns1="http://jaxb.dev.java.net/array" name="arg1" type="ns1:stringArray" />
+  </message>
+  <message name="calcularDistanciaMultiplasCidadesResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="calcularDistanciaMaxima">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:int" />
+  </message>
+  <message name="calcularDistanciaMaximaResponse">
+    <part xmlns:ns2="http://jaxb.dev.java.net/array" name="return" type="ns2:stringArray" />
+  </message>
+  <message name="calcularDistanciaDuasCidades">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="calcularDistanciaDuasCidadesResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <portType name="DistanciasServer">
+    <operation name="calcularDistanciaMultiplasCidades" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://server/DistanciasServer/calcularDistanciaMultiplasCidadesRequest" message="tns:calcularDistanciaMultiplasCidades" />
+      <output wsam:Action="http://server/DistanciasServer/calcularDistanciaMultiplasCidadesResponse" message="tns:calcularDistanciaMultiplasCidadesResponse" />
+    </operation>
+    <operation name="calcularDistanciaMaxima" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://server/DistanciasServer/calcularDistanciaMaximaRequest" message="tns:calcularDistanciaMaxima" />
+      <output wsam:Action="http://server/DistanciasServer/calcularDistanciaMaximaResponse" message="tns:calcularDistanciaMaximaResponse" />
+    </operation>
+    <operation name="calcularDistanciaDuasCidades" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://server/DistanciasServer/calcularDistanciaDuasCidadesRequest" message="tns:calcularDistanciaDuasCidades" />
+      <output wsam:Action="http://server/DistanciasServer/calcularDistanciaDuasCidadesResponse" message="tns:calcularDistanciaDuasCidadesResponse" />
+    </operation>
+  </portType>
+  <binding name="DistanciasServerImplPortBinding" type="tns:DistanciasServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="calcularDistanciaMultiplasCidades">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://server/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://server/" />
+      </output>
+    </operation>
+    <operation name="calcularDistanciaMaxima">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://server/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://server/" />
+      </output>
+    </operation>
+    <operation name="calcularDistanciaDuasCidades">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://server/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://server/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DistanciasServerImplService">
+    <port name="DistanciasServerImplPort" binding="tns:DistanciasServerImplPortBinding">
+      <soap:address location="http://localhost:8080/dis" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,30 @@
+- criar o grupo multicast
+- join primeiro processo
+(eleição)
+- processos mandam a primeira mensagem em multicast com o ID do processo
+- aguarda resposta por 10 segundos
+- do outro lado: 
+	- recebe a mensagem
+	- compara o ID recebido com o próprio
+	- se for maior, responde OK
+	- se não, não faz nada
+- se a resposta vier, outro processo fará a eleição
+- senão, o processo vira coordenador
+
+SUGESTÃO (usar thread): 2 loops -> deixar dentro de uma classe de comunicação, pois poderá utilizar sobrecarga
+- 1 para multicast
+- 1 para unicast 
+
+dúvidas:
+- de que maneira eu consigo identificar se dentro de um grupo multicast existem outros processos em execução? NÃO É NECESSÁRIO!!!!!!!!!!!
+- de que maneira eu posso avisar os outros processos quem é o coordenador?
+_____________________________________________________
+| Mensagem  | Remetente 	   | Destinatário 	     |
+|	 WHO    | Processo (uni)   | Coordenador (mult)  | ok
+|COORDINATOR| Coordenador (uni)| Processo (mult) 	 | ok
+|    AIC    | Coordenador (uni)| Processo (uni)		 | ok
+|    AYA    | Processo (uni)   | Coordenador (uni)	 | ok
+|	 IAA	| Coordenador (uni)| Processo (uni)		 | ok
+| ELECTION	| Processo (uni)   | Processo (mult)	 |
+|	 OK		| Processo (uni)   | Processo (uni)		 |
+------------------------------------------------------
